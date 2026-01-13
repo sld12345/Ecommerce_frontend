@@ -1,0 +1,165 @@
+/* --- FOOTER CONTAINER --- */
+.footer {
+  background-color: #2e2320; /* Dark Chocolate Background */
+  color: #e0d0c0; /* Light Beige Text */
+  padding: 4rem 2rem 1.5rem;
+  border-top: 4px solid #d39b5a; /* Gold accent border on top */
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  /* Changed to 3 columns: Brand is wider, others equal */
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+/* --- HEADINGS & LOGO --- */
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #fffaf3; /* Cream */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #d39b5a; /* Gold */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- COLUMN STYLING --- */
+.footer-desc {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  max-width: 300px; /* Limits width for better readability */
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Quick Links Styling */
+.links-col ul li a {
+  color: #e0d0c0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.links-col ul li a:hover {
+  color: #d39b5a; /* Gold on hover */
+  padding-left: 5px; /* Slide effect */
+}
+
+/* Contact List Styling */
+.contact-list li {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.contact-list span {
+  font-size: 1.1rem; /* Icons slightly larger */
+}
+
+/* --- FOOTER BOTTOM --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #d39b5a;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #d39b5a;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.8rem;
+}
+
+.social-icons a:hover {
+  background-color: #d39b5a;
+  color: #2e2320;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+    gap: 3rem;
+  }
+  
+  /* Make the brand column span full width on tablet */
+  .brand-col {
+    grid-column: span 2;
+    text-align: center;
+  }
+  
+  .footer-desc {
+    margin: 0 auto; /* Center description text */
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .brand-col {
+    grid-column: span 1;
+  }
+  
+  .footer-col ul li {
+    justify-content: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

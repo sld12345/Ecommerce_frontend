@@ -1,0 +1,201 @@
+/* --- LAYOUT & BACKGROUND --- */
+.products-container {
+  padding: 3rem 1.5rem; /* Reduced padding */
+  background-color: #fffaf3;
+  min-height: 80vh;
+}
+
+/* --- HEADER --- */
+.products-header { text-align: center; margin-bottom: 2.5rem; margin-top: 100px}
+.products-subtitle { 
+  display: block; font-size: 0.8rem; text-transform: uppercase; 
+  letter-spacing: 2px; color: #d39b5a; font-weight: 700; margin-bottom: 5px; 
+}
+.products-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #3b2f2f; margin: 0; }
+.header-divider { width: 50px; height: 3px; background: #d39b5a; margin: 1rem auto 0; border-radius: 2px; }
+
+/* --- GRID (Reduced Widths) --- */
+.products-grid {
+  display: grid;
+  /* Reduced min-width from 280px to 210px for smaller cards */
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); 
+  gap: 1.5rem; /* Reduced gap */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- CARD STRUCTURE --- */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(93, 64, 55, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(93, 64, 55, 0.12);
+  border-color: #d39b5a;
+}
+
+/* --- IMAGE AREA (Reduced Height) --- */
+.card-image {
+  width: 100%;
+  height: 180px; /* Reduced from 250px to 180px */
+  background: #eee;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- DETAILS AREA --- */
+.card-details {
+  padding: 1rem; /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 0.8rem;
+}
+
+.card-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; /* Smaller Font */
+  color: #3b2f2f;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.card-text .description {
+  font-size: 0.8rem; /* Smaller Description */
+  color: #777;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- CONTROLS SECTION --- */
+.card-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #f5f5f5;
+}
+
+/* Row 1: Price and Dropdown */
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-display {
+  font-size: 1rem; /* Smaller Price */
+  color: #d39b5a;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.variant-select {
+  margin-left: 100px; /* This pushes it to the right */
+  padding: 4px 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #555;
+  background: #fafafa;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Row 2: Quantity and Add Button */
+.action-row {
+  display: flex;
+  gap: 8px;
+}
+
+.qty-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fafafa;
+  height: 32px; /* Smaller height */
+}
+
+.qty-wrapper button {
+  width: 25px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  color: #3b2f2f;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.qty-wrapper button:hover {
+  background: #eee;
+}
+
+.qty-wrapper span {
+  width: 25px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.add-cart-btn {
+  flex: 1;
+  background: #3b2f2f;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  height: 32px; /* Smaller height */
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-cart-btn:hover {
+  background: #d39b5a;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Even smaller on mobile */
+    gap: 1rem;
+  }
+  
+  .card-image {
+    height: 150px;
+  }
+  
+  .products-title {
+    font-size: 2rem;
+  }
+  
+  .card-details {
+    padding: 0.8rem;
+  }
+}

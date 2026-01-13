@@ -1,0 +1,169 @@
+/* --- HERO WRAPPER --- */
+.hero-wrapper {
+  width: 100%;
+  position: relative;
+  /* Removes any default margin issues */
+  margin: 0;
+  padding: 0;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 650px; /* Cinematic height */
+  overflow: hidden;
+}
+
+/* --- IMAGE STYLING --- */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Optional: Slow zoom effect for a premium feel */
+  animation: slowZoom 20s infinite alternate;
+}
+
+/* @keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+} */
+
+/* --- THE OVERLAY (Brand Gradient) --- */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradient from Left (Dark Brown) to Right (Transparent) */
+  background: linear-gradient(
+    90deg, 
+    rgba(46, 35, 32, 0.95) 0%,   /* Deep Brand Brown */
+    rgba(46, 35, 32, 0.75) 40%,  
+    rgba(46, 35, 32, 0.2) 70%,   
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* --- TEXT CONTENT LAYOUT --- */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 8%; /* Indent from left */
+  transform: translateY(-50%);
+  max-width: 600px;
+  z-index: 2;
+  text-align: left;
+  color: white;
+  padding-right: 20px;
+}
+
+/* --- TYPOGRAPHY --- */
+.hero-subtitle {
+  display: block;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #d39b5a; /* Gold Accent */
+  font-weight: 700;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 0.5s;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fffaf3; /* Cream */
+  margin: 0 0 20px 0;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 0.8s;
+}
+
+.hero-desc {
+  font-size: 1.25rem;
+  color: #e0d0c0; /* Beige */
+  font-weight: 300;
+  margin-bottom: 35px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 1.1s;
+}
+
+/* --- BUTTON STYLING --- */
+.hero-btn {
+  padding: 14px 40px;
+  background-color: #d39b5a; /* Gold */
+  color: #2e2320; /* Dark Brown Text */
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 50px; /* Pill shape */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 1.4s;
+  box-shadow: 0 4px 15px rgba(211, 155, 90, 0.3);
+}
+
+.hero-btn:hover {
+  background-color: #fffaf3; /* Cream */
+  color: #d39b5a; /* Gold Text */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(211, 155, 90, 0.4);
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 550px; /* Shorter for mobile */
+  }
+
+  .hero-overlay {
+    /* Vertical gradient for mobile to ensure text readability at bottom */
+    background: linear-gradient(
+      180deg, 
+      rgba(46, 35, 32, 0.2) 0%, 
+      rgba(46, 35, 32, 0.8) 60%,
+      rgba(46, 35, 32, 1) 100%
+    );
+  }
+
+  .hero-content {
+    left: 5%;
+    right: 5%;
+    top: auto;
+    bottom: 8%; /* Move text to bottom */
+    transform: none;
+    text-align: center; /* Center align for mobile */
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+}

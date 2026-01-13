@@ -1,0 +1,163 @@
+/* EditProfile.css */
+
+.edit-profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  min-height: 100vh;
+}
+
+.edit-profile-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 650px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.edit-profile-card h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #3498db;
+}
+
+h3 {
+  margin-top: 25px;
+  color: #2c3e50;
+  font-size: 20px;
+}
+
+.addresses {
+  margin-top: 15px;
+}
+
+.address-edit-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #eee;
+}
+
+.address-edit-card input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.address-edit-card button {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.address-edit-card button:hover {
+  background: #c0392b;
+}
+
+.add-address-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-address-btn:hover {
+  background: #27ae60;
+}
+
+.save-button, .cancel-button {
+  margin-top: 20px;
+  width: 48%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.save-button {
+  background: #3498db;
+  color: white;
+  margin-right: 4%;
+}
+
+.save-button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.cancel-button {
+  background: #bdc3c7;
+  color: #2c3e50;
+}
+
+.cancel-button:hover {
+  background: #95a5a6;
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 50px;
+  color: #3498db;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
