@@ -16,10 +16,10 @@ const HeroBanner = () => {
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
-          <span className="hero-subtitle">Seasonal Special</span>
-          <h1 className="hero-title">Rich & Authentic Christmas Plum Cake</h1>
+          <span className="hero-subtitle">Signature Special</span>
+          <h1 className="hero-title">Rich & Authentic Cakes</h1>
           <p className="hero-desc">
-            Soaked in tradition, baked with love. Experience the festive magic in every slice.
+            Soaked in tradition, baked with love. Experience the magic in every slice.
           </p>
           <a href='#shop'><button className="hero-btn">Order Your Cake</button></a>
         </div>
