@@ -7,7 +7,7 @@ const HeroBanner = () => {
       <div className="hero-container">
         {/* Replace with your specific Christmas Plum Cake image path */}
         <img 
-          src="/images/christmas-plum-cake.png" 
+          src="/images/cake.jpeg" 
           alt="Christmas Plum Cake" 
           className="hero-image"
         />
