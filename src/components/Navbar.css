@@ -10,9 +10,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 3rem;
+  padding: 0 3rem; /* Removed vertical padding, fixed height handles it */
+  height: 70px;    /* FIXED HEIGHT keeps navbar consistent */
   background-color: #ffffff;
-  border-bottom: 3px solid #d39b5a; /* Gold accent */
+  border-bottom: 3px solid #d39b5a;
   width: 100%;
   position: fixed;
   top: 0;
@@ -25,18 +26,66 @@
 .logo {
   display: flex;
   align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  height: 100%; /* Ensures the link area covers the navbar height */
 }
 
 /* Desktop Logo Image */
 .logo-img {
-  height: 50px; /* Adjust height as needed */
+  /* Increase height beyond the navbar height to make it "pop" */
+  height: 85px; 
   width: auto;
   object-fit: contain;
+  
+  /* This moves the logo slightly down and up so it overlaps the border 
+     without pushing the navbar height */
+  margin-top: 10px; 
+  
   transition: transform 0.2s ease;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1)); /* Optional: adds depth */
 }
 
 .logo-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+
+/* Bakery Name Styling */
+.bakery-name {
+  font-size: 1.4rem; /* Slightly larger to match the bigger logo */
+  font-weight: 700;
+  color: #3b2f2f; /* Darker brown for better contrast */
+  white-space: nowrap;
+  font-family: 'Playfair Display', serif; /* Elegant bakery font */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px; /* Slimmer navbar on mobile */
+    padding: 0 1rem;
+  }
+  .bakery-name {
+    display: none;
+  }
+  .logo-img {
+    height: 65px; /* Scale down slightly for mobile but keep it prominent */
+    margin-top: 5px;
+  }
+}
+
+/* Bakery Name Styling */
+.bakery-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333; /* Change to your preferred color */
+  white-space: nowrap; /* Prevents the name from wrapping to two lines */
+}
+
+/* Responsive Rule: Hide text on small screens */
+@media (max-width: 768px) {
+  .bakery-name {
+    display: none;
+  }
 }
 
 /* --- 4. NAVIGATION LINKS (Desktop) --- */
