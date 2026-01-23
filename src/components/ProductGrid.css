@@ -40,7 +40,7 @@
 .bakery-grid {
   display: grid;
   /* Auto-fill creates responsive columns without media queries */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 2.5rem;
 }
 
