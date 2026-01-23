@@ -16,13 +16,13 @@ const Footer = () => {
               className="footer-logo-img"
             />
             <div className="brand-text-group">
-              <h3 className="brand-name">Al Dasmah Bakery</h3>
+              <h3 className="brand-name">Al Dasma Bakery</h3>
               <span className="brand-subtitle">Kingdom of Bahrain</span>
             </div>
           </div>
 
           <p className="brand-bio">
-            A legacy of excellence since 1983. M/S. Al Dasmah Bakery is a leading
+            A legacy of excellence since 1983. M/S. Al Dasma Bakery is a leading
             confectionery producer, combining tradition with state-of-the-art
             production.
           </p>
