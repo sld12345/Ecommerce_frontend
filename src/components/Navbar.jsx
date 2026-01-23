@@ -63,7 +63,7 @@ const Navbar = () => {
           </li>
 
           <li><a href="/" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a></li>
-          <li><a href="#shop" onClick={(e) => { e.preventDefault(); scrollToSection('shop'); }}>Shop</a></li>
+          <li><a href="#shop" onClick={(e) => { e.preventDefault(); scrollToSection('shop'); }}>Products</a></li>
           <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About Us</a></li>
           <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
         </ul>
