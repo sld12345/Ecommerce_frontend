@@ -35,8 +35,9 @@ const Navbar = () => {
       <nav className="navbar">
         {/* LOGO */}
         <div className="logo">
-          <a href="/" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
+          <a href="/" className="logo" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
             <img src="/images/logo.png" alt="Logo" className="logo-img" />
+            <span class="bakery-name">Al Dasma Bakery</span>
           </a>
         </div>
 
