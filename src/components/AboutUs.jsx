@@ -19,8 +19,8 @@ const AboutUs = () => {
         
         {/* HEADER */}
         <div className="about-header">
-          <span className="about-subtitle">Al Dasma Bakery</span>
-          <h2 className="about-title">The Art of Baking</h2>
+          <span className="about-subtitle">Heritage Since 1983</span>
+          <h2 className="about-title">Al Dasma Bakery</h2>
           <div className="title-underline"></div>
         </div>
 
