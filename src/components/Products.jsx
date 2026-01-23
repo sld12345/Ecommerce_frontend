@@ -78,32 +78,6 @@ const Products = () => {
               <div className="card-details">
                 <div className="card-text">
                   <h3>{prod.name}</h3>
-                  <p className="description">{prod.description || "Freshly baked goodness."}</p>
-                </div>
-
-                <div className="card-controls">
-                  {/* Price and Variant selection only */}
-                  <div className="control-row display-only">
-                    <div className="variant-info">
-                      <span className="price-display">
-                        {selectedVariants[prod._id] ? `₹${selectedVariants[prod._id].price}` : '---'}
-                      </span>
-                      
-                      {prod.priceVariants && prod.priceVariants.length > 0 && (
-                        <select
-                          value={selectedVariants[prod._id]?.quantityLabel || ''}
-                          onChange={(e) => handleVariantChange(prod._id, e.target.value)}
-                          className="variant-select"
-                        >
-                          {prod.priceVariants.map((v) => (
-                            <option key={v.quantityLabel} value={v.quantityLabel}>
-                              {v.quantityLabel}
-                            </option>
-                          ))}
-                        </select>
-                      )}
-                    </div>
-                  </div>
                 </div>
               </div>
 
