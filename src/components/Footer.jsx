@@ -1,61 +1,96 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import { Facebook, Instagram } from "lucide-react"; // Import clean icons
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer" id='contact'>
+    <footer className="footer" id="contact">
       <div className="footer-container">
-        
-        {/* Column 1: Brand & About */}
-        <div className="footer-col brand-col">
-          <div className="footer-logo">
-            <span className="logo-icon"></span> Logo
+
+        {/* Section 1: Brand Identity */}
+        <div className="footer-brand">
+          <div className="brand-wrap">
+            <img
+              src="/images/logo.png"
+              alt="Al Dasmah Bakery"
+              className="footer-logo-img"
+            />
+            <div className="brand-text-group">
+              <h3 className="brand-name">Al Dasmah Bakery</h3>
+              <span className="brand-subtitle">Kingdom of Bahrain</span>
+            </div>
           </div>
-          <p className="footer-desc">
-            Crafting memories with every slice. We use only the finest ingredients to bring you the authentic taste of tradition and love.
+
+          <p className="brand-bio">
+            A legacy of excellence since 1983. M/S. Al Dasmah Bakery is a leading
+            confectionery producer, combining tradition with state-of-the-art
+            production.
           </p>
+
+          <div className="footer-socials">
+            <a
+              href="https://www.facebook.com/p/Al-Dasmah-Bakery-100067039935651/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-box"
+              aria-label="Facebook"
+            >
+              <Facebook size={20} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://www.instagram.com/aldasmah.bakery/?hl=en"
+              target="_blank"
+              rel="noreferrer"
+              className="social-box"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} strokeWidth={1.5} />
+            </a>
+          </div>
         </div>
 
-        {/* Column 2: Quick Links */}
-        <div className="footer-col links-col">
-          <h4 className="footer-heading">Quick Links</h4>
-          <ul>
+        {/* Section 2: Quick Links */}
+        <div className="footer-nav">
+          <h4 className="column-title">Quick Links</h4>
+
+          <ul className="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/shop">Our Menu</a></li>
-            <li><a href="/about">Our Story</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="#shop">Our Menu</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
+
+          <div className="footer-email-block">
+            <small>Email</small>
+            <a href="mailto:sales@aldasmah.com" className="footer-email">
+              sales@aldasmah.com
+            </a>
+          </div>
         </div>
 
-        {/* Column 3: Contact Info */}
-        <div className="footer-col contact-col">
-          <h4 className="footer-heading">Contact Us</h4>
-          <ul className="contact-list">
-            <li>
-              <span></span> 123 Bakery Lane, Food City
-            </li>
-            <li>
-              <span></span> +123 456 7890
-            </li>
-            <li>
-              <span></span> hello@sweettreats.com
-            </li>
-            <li>
-              <span></span> Mon - Sun: 8am - 10pm
-            </li>
-          </ul>
+        {/* Section 3: Contact Details */}
+        <div className="footer-contact">
+          <h4 className="column-title">Our Locations</h4>
+
+          <div className="location-grid">
+            <div className="info-block">
+              <small>Main Factory</small>
+              <p>1740 2333</p>
+              <p>1740 0272</p>
+            </div>
+
+            <div className="info-block">
+              <small>Manama Branch</small>
+              <p>1725 5367</p>
+            </div>
+
+            <div className="info-block">
+              <small>Gudaibiya Branch</small>
+              <p>1729 4862</p>
+            </div>
+          </div>
         </div>
 
-      </div>
-
-      {/* Footer Bottom: Copyright & Socials */}
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Sweet Treats Bakery. All rights reserved.</p>
-        <div className="social-icons">
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Twitter">TW</a>
-        </div>
       </div>
     </footer>
   );
