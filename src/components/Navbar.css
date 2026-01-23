@@ -52,11 +52,14 @@
 
 /* Bakery Name Styling */
 .bakery-name {
-  font-size: 1.4rem; /* Slightly larger to match the bigger logo */
+  font-family: "Playfair Display", serif;
+  font-size: 1.65rem;            /* Bigger */
   font-weight: 700;
-  color: #3b2f2f; /* Darker brown for better contrast */
+  color: #3b2f2f;
+  letter-spacing: 1.5px;         /* Elegant spacing */
+  text-transform: uppercase;
+  position: relative;
   white-space: nowrap;
-  font-family: 'Playfair Display', serif; /* Elegant bakery font */
 }
 
 @media (max-width: 768px) {
@@ -70,21 +73,6 @@
   .logo-img {
     height: 65px; /* Scale down slightly for mobile but keep it prominent */
     margin-top: 5px;
-  }
-}
-
-/* Bakery Name Styling */
-.bakery-name {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #333; /* Change to your preferred color */
-  white-space: nowrap; /* Prevents the name from wrapping to two lines */
-}
-
-/* Responsive Rule: Hide text on small screens */
-@media (max-width: 768px) {
-  .bakery-name {
-    display: none;
   }
 }
 
