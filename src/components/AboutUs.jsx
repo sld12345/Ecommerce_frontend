@@ -19,7 +19,7 @@ const AboutUs = () => {
         
         {/* HEADER */}
         <div className="about-header">
-          <span className="about-subtitle">Heritage Since 1983</span>
+          <span className="about-subtitle">Al Dasma Bakery</span>
           <h2 className="about-title">The Art of Baking</h2>
           <div className="title-underline"></div>
         </div>
@@ -30,7 +30,7 @@ const AboutUs = () => {
           {/* Left Column: The Narrative */}
           <div className="about-text-column">
             <p className="lead-paragraph">
-              <strong>M/S. AL DASMAH BAKERY</strong> is one of the leading confectionery production units in the Kingdom of Bahrain. 
+              <strong>M/S. AL DASMA BAKERY</strong> is one of the leading confectionery production units in the Kingdom of Bahrain. 
               Promoters from the esteemed <strong>A.E. Alnooh & Sons Co WLL</strong> have built a 50-year legacy of excellence.
             </p>
             <p>
@@ -39,7 +39,7 @@ const AboutUs = () => {
             </p>
             <p>
               We serve the entire Kingdom—from Hypermarkets and Star Hotels to Hospitals and School Canteens. 
-              During festive seasons like Eid and Christmas, <strong>Al Dasmah</strong> stands as the market leader for celebration treats.
+              During festive seasons like Eid and Christmas, <strong>Al Dasma</strong> stands as the market leader for celebration treats.
             </p>
           </div>
 
